@@ -1,0 +1,786 @@
+@import "reset200802";
+$primary_color:#56C4C5;
+$secondary_color:#FF5D50;
+$black:#221E1F;
+$text_gray:#747474;
+$grayf5:#f5f5f5;
+$grayd:#ddd;
+$yellow:#FFD153;
+$shadow: 0px 2px 10px #00000014;
+
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    text-align: center;
+    border-radius: 100%;
+    box-shadow: $shadow;
+    line-height: $size;
+        
+}
+@mixin card($w) {
+    width: $w;    
+    box-shadow: $shadow;
+    border-radius: 12px;    
+}
+*,*:before,*:after{
+    box-sizing: border-box;    
+}
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    position: relative;
+}
+
+.bghome{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    max-width: 100%;
+}
+.bghomesm{
+    display: none;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.container{
+    max-width: 1088px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 90vh;
+    position: relative;
+}
+.top{
+    @include circle(71px);
+    background: $primary_color;
+    color: #fff;
+    font-size: 20px;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    font-weight: bolder;
+    &:hover{
+        background: lighten($primary_color,5%);
+    }
+    z-index: 1;
+}
+.header_top{   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1088px;
+    padding: 24px 0px;
+    margin-bottom: 30px;
+}
+.logo img{
+    max-width: 215px;
+}
+
+.pg2btn{
+    width: 128px;
+    background: $secondary_color;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 8px 32px;
+    border-radius: 22px;
+    &:hover{
+        background: lighten($secondary_color,5%);
+    }
+}
+.pg2btn2{
+    display: inline-block;
+    font-family: 'Comfortaa';
+    background: $primary_color;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 12px 32px;
+    border-radius: 27px;
+    &:hover{
+        background: lighten($primary_color,5%);
+    }
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 217px;
+    h4{
+        color: $primary_color;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 8px;
+    }
+    h2{
+        font-size: 48px;
+        line-height: 70px;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 20px;
+        line-height: 29px;
+        color: $black;
+    }
+
+}
+
+.intro,.banner{
+    width: 50%;
+}
+.title{
+    font-size: 32px;
+    line-height: 46px;
+    color: $black;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 48px;
+
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+.cscard{
+    width: 33%;
+    color: $black;
+    text-align: center;
+    margin-bottom: 100px;
+
+    
+    img{
+        max-width: 90px;
+        margin-bottom: 24px;
+    }
+    
+    h3{
+        font-size: 24px;
+        line-height: 35px;
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+    h4{
+        font-size: 16px;
+        line-height: 24px;
+        color:$text_gray;
+
+    }
+}
+
+
+.role{
+    text-align: center;
+    p{
+        font-size: 20px;
+        line-height: 29px;
+        margin-top: -32px;
+        margin-bottom: 48px;
+    }
+}
+
+.rolecard{
+    @include card(23%);
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 100px;
+    
+    img{
+        border-radius: 12px 12px 0px 0px;
+    }
+    h3{
+        color: $primary_color;    
+        margin-top: 16px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 16px;
+        margin-bottom: 48px;
+
+    }
+}
+
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .intro{
+        width: 40%;
+        h2{
+            font-size: 32px;
+            line-height: 46px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 24px;
+            margin-top: 16px;
+        }    
+    }
+
+}
+.feature .list{
+    max-width: 554px;
+    flex-wrap: wrap;   
+}
+.featurecard{
+    @include card(230px);    
+    align-items: center;
+    padding: 32px 32px 48px 32px;
+    margin-bottom: 28px;
+    margin-right: 47px;
+    
+    h3{
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+.imgcard{
+    @include circle(86px);
+    padding: 15px;
+    margin-bottom: 24px;
+}
+.user{
+    margin-bottom: 100px;
+    .title{
+        margin-bottom: 104px;
+    }
+}
+.usercard{
+    position: relative;
+    @include card(352px);
+    padding: 48px 32px 28px 32px;
+    margin-bottom: 24px;
+    p,h4{
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    }
+    h4{
+        margin-bottom: 8px;
+    }
+    .bb{
+        border-bottom: 1px solid $grayd;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+}
+.photo{
+    @include circle(80px);
+    position: absolute;
+    left: 32px;
+    top: -56px;
+}
+.starlist{
+    width: 122px;
+    height: 17px;
+    position: absolute;
+    bottom: 28px;
+    right: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+.star{
+    width: 17px;
+    height: 17px;
+
+}
+.togglebtn{
+    display: flex;
+    justify-content: center;    
+}
+.toggle_d{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: $grayd;
+    margin-right: 8px;
+}
+.toggle_s{
+    width: 16px;
+    height: 10px;
+    background: $yellow;
+    border-radius: 50px;
+}
+.cp{
+    cursor: pointer;
+}
+.footer{
+    height: 503px;
+    padding-top: 260px;
+    text-align: center;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    h2{
+        font-size: 32px;
+        line-height: 46px;
+        color: $black;
+        margin-bottom: 48px;    
+    }
+}
+.copyright{
+    p{
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    } 
+    background: $grayf5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+// P1平板
+@media (max-width:767px){
+    .header_top{
+        padding: 24px 20px;
+        border-bottom: 2px solid $yellow;
+        background: #fff;
+    }
+    .logo img{
+        max-width: 180px;
+    } 
+    .container{
+        padding: 20px;
+    }
+    .list{
+        flex-wrap: wrap;
+        margin-top: 32px;
+    }
+    .rolecard{
+        @include card(48%);
+
+    }
+    .feature{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        .intro{
+            text-align: center;
+            width: 100%;
+            h2{
+                font-size: 28px;
+                line-height: 40px;    
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 16px;
+            }
+        }
+        .list{
+            max-width: 100%;
+            justify-content: center;
+        }
+    }
+    .featurecard{    
+        margin-right: 0px;
+        margin-bottom: 24px;
+    }
+}
+// P1手機版
+@media(max-width:376px){
+    .header{
+        height: 80vh;
+    }
+    
+    .container{
+        max-width: 335px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+    .bghome{
+        display: none;
+    }
+    .bghomesm{
+        display: block;
+        position: absolute;
+        top: 390px;
+        right: 20px;
+        z-index: -1;
+        max-width: 100%;
+    }
+
+
+    .logo img{
+        max-width: 130px;
+    }
+    .hero{
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+        h4{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        h2{
+            font-size: 32px;
+            line-height: 46px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .intro,.banner{
+        width: 100%;
+    }
+    .title{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    
+    .cs{
+        margin-bottom: 60px;
+    }
+    .cscard{
+        width: 100%;
+        margin-bottom: 24px;
+        img{
+            width: 60px;
+            margin-bottom: 16px;
+        }
+        h3{
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 16px;
+        }
+            
+    }
+    .role{
+        margin-bottom: 36px;
+        p{
+            font-size: 18px;
+            line-height: 26px;
+            margin-top: -32px;
+            margin-bottom: 32px;
+        }
+    }
+    .rolecard{
+        @include card(260px);
+        margin: 0 auto;
+        margin-bottom: 24px;
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+            margin-top: 16px;
+            padding: 0px 16px;
+        }
+    }
+    .feature{
+        .intro{
+            text-align: center;
+            width: 100%;
+            h2{
+                font-size: 28px;
+                line-height: 40px;    
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 16px;
+            }
+        }
+        .list{
+            margin-bottom: 60px;
+        }
+    }
+    .featurecard{
+        padding: 32px 41px 48px 24px;
+        margin-bottom: 24px;
+        h3{
+            margin-bottom: 20px;
+        }
+    }
+    .user{
+        margin-bottom: 60px;
+        .title{
+            margin-bottom: 88px;
+        }
+    }
+    .hide{
+        display: none;
+    }
+    .footer{
+        height: 461px;
+        padding-top: 293px;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg);
+        h2{
+            font-size: 24px;
+            line-height: 35px;
+            margin-bottom: 24px;
+        }
+    }
+    .top{
+        @include circle(50px);
+        font-size: 15px;
+    }
+
+}
+// P2電腦
+.bannerbg{
+    position: absolute;
+    top: 0px;
+    background: #f7f9fd;
+    width: 100vw;
+    height: 470px;
+    border-radius: 0px 0px 0px 300px;
+    z-index: -5;
+}
+.bg01{
+    position: absolute;
+    top:0px;
+    right:0px;
+    // width: 70%;
+    z-index: -3;
+}
+.bg02{
+    display: none;
+}
+.header2{
+    height: 50vh;
+    padding-top: 92px;
+    position: relative;
+    margin-bottom: 100px;
+    h2{
+        font-size: 48px;
+        line-height: 70px;
+        color: $black;
+        margin-bottom: 16px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+}
+.plan{
+    margin-bottom: 100px;
+}
+.planbtnlist{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+}
+.plancontent{
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+    flex-wrap: wrap;
+}
+.plancard{
+    text-align: center;
+    @include card(444px);
+    h3{
+        display: block;
+        padding: 10px 29px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 35px;
+        color: $black;
+        border-bottom: 2px solid $grayd;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: $black;
+    }
+    .tip{
+        margin-bottom: 32px;
+    }
+}
+.formula{
+    display: flex;
+    justify-content: center;
+    gap: 18px; 
+    align-items: center;
+    margin-bottom: 32px;
+    h2{
+        font-size: 29px;
+        line-height: 42px;
+        font-weight: normal;
+    }   
+}
+.block{
+    padding: 24px 39px;
+    background: $grayf5;
+    border-radius: 12px;
+    text-align: center;
+    span{
+        font-size: 12px;
+        line-height: 17px;
+        margin-bottom: 8px;    
+    }
+    p{
+        font-size: 32px;
+        line-height: 35px;    
+    }
+    
+    sub{
+        font-size: 12px;
+        line-height: 17px;
+        // vertical-align: sub;
+        margin-left: 8px;
+    }
+    .useramount{
+        color: $primary_color;
+    }
+}
+.check{
+    // display: inline-block;
+    list-style-position:inside;
+    text-align: left;
+    margin-bottom: 32px;
+    list-style-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_check.svg");
+    p{
+        display: inline;
+    }
+    li{
+        margin-bottom: 16px;
+    }
+    
+    
+}
+.wrap{
+    padding: 32px 29px;
+}
+.QAlist{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.QA{
+    margin-bottom: 100px;
+}
+.QAitem{
+    @include card(904px);
+    margin-bottom: 16px;
+    padding: 16px 32px;
+    font-size: 18px;
+    line-height: 28px;
+    color: $black;
+    position: relative;
+    img{
+        position: absolute;
+        top: 19px;
+        right: 32px;
+        cursor: pointer;
+    }
+    h3{
+        font-size: 18px;
+        line-height: 28px;
+        color: $primary_color;
+        margin-bottom: 24px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 32px;
+        color: $text_gray;
+        margin-bottom: 16px;
+    }
+}
+@media (max-width:767px){
+    .plancontent{
+        gap: 24px;
+    }
+    .plancard{
+        @include card(335px);
+        .tip{
+            margin-bottom: 24px;
+        }
+         
+    }
+    .block{
+        padding: 26px 24px;
+        p{
+            font-size: 28px;
+            line-height: 32px;
+        }
+        sub{
+            margin-left: 4px;
+        }
+    }
+    .formula{
+        gap: 6px;
+        margin-bottom: 27px;
+        h2{
+            font-size: 24px;
+            line-height: 35px;
+        }
+
+    }
+    .check{
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    .plan{
+        margin-bottom: 60px;
+    }
+    .wrap{
+        padding: 24px 16px;
+    }
+}
+@media(max-width:376px){
+    .bannerbg{
+        height: 600px;
+    }
+    .bg01{
+        display: none;
+    }
+    .bg02{
+        display: block;
+        position: absolute;
+        right: -20px;
+        top: -30px;
+        z-index: -3;
+    }
+    .header2{
+        padding-top: 48px;
+        height: 70vh;
+        margin-bottom: 60px;
+        h2{
+            font-size: 32px;
+            line-height: 46px;
+        }
+    }
+    .QAitem{
+        padding: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        img{
+            top: 20px;
+            right: 17px;
+            width: 16px;
+        }
+        h3{
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+        p{
+            margin-bottom: 8px;
+        }
+        .QA{
+            margin-bottom: 60px;
+        }
+    }
+
+}
