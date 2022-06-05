@@ -536,6 +536,8 @@ a{
     top: 0px;
     background: #f7f9fd;
     width: 100vw;
+     //不知道為何100vw有時候會造成x軸有時不會，我太難了
+    right: 0px;
     height: 470px;
     border-radius: 0px 0px 0px 300px;
     z-index: -5;

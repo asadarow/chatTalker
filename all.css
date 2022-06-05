@@ -678,6 +678,7 @@ a {
   top: 0px;
   background: #f7f9fd;
   width: 100vw;
+  right: 0px;
   height: 470px;
   border-radius: 0px 0px 0px 300px;
   z-index: -5;
