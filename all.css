@@ -552,6 +552,14 @@ a {
   .hide {
     display: none;
   }
+  .footer {
+    background-size: cover;
+  }
+  .footer h2 {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 24px;
+  }
 }
 
 @media (max-width: 376px) {
@@ -665,14 +673,10 @@ a {
     margin-bottom: 88px;
   }
   .footer {
+    background-size: contain;
     height: 461px;
     padding-top: 293px;
     background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg);
-  }
-  .footer h2 {
-    font-size: 24px;
-    line-height: 35px;
-    margin-bottom: 24px;
   }
   .top {
     width: 50px;

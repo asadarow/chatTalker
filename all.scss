@@ -413,6 +413,14 @@ a{
     .hide{
         display: none;
     }
+    .footer{
+        background-size: cover;
+        h2{
+            font-size: 24px;
+            line-height: 35px;
+            margin-bottom: 24px;
+        }
+    }
 }
 // P1手機版
 @media(max-width:376px){
@@ -534,14 +542,11 @@ a{
     }
 
     .footer{
+        background-size: contain;
         height: 461px;
         padding-top: 293px;
         background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg);
-        h2{
-            font-size: 24px;
-            line-height: 35px;
-            margin-bottom: 24px;
-        }
+
     }
     .top{
         @include circle(50px);
