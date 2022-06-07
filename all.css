@@ -549,6 +549,9 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .hide {
+    display: none;
+  }
 }
 
 @media (max-width: 376px) {
@@ -660,9 +663,6 @@ a {
   }
   .user .title {
     margin-bottom: 88px;
-  }
-  .hide {
-    display: none;
   }
   .footer {
     height: 461px;

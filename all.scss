@@ -410,6 +410,9 @@ a{
         }
         
     }
+    .hide{
+        display: none;
+    }
 }
 // P1手機版
 @media(max-width:376px){
@@ -529,9 +532,7 @@ a{
             margin-bottom: 88px;
         }
     }
-    .hide{
-        display: none;
-    }
+
     .footer{
         height: 461px;
         padding-top: 293px;
