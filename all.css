@@ -530,6 +530,25 @@ a {
     margin-right: 0px;
     margin-bottom: 24px;
   }
+  .hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .intro, .banner {
+    width: 100%;
+  }
+  .cscard {
+    width: 100%;
+  }
+  .usercard {
+    margin-bottom: 75px;
+  }
+  .user .list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media (max-width: 376px) {
@@ -556,8 +575,6 @@ a {
     max-width: 130px;
   }
   .hero {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin-bottom: 60px;
   }
   .hero h4 {
@@ -572,9 +589,6 @@ a {
     font-size: 16px;
     line-height: 24px;
   }
-  .intro, .banner {
-    width: 100%;
-  }
   .title {
     font-size: 28px;
     line-height: 40px;
@@ -583,7 +597,6 @@ a {
     margin-bottom: 60px;
   }
   .cscard {
-    width: 100%;
     margin-bottom: 24px;
   }
   .cscard img {

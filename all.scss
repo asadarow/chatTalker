@@ -346,6 +346,7 @@ a{
 }
 // P1平板
 @media (max-width:767px){
+
     .header_top{
         padding: 24px 20px;
         border-bottom: 2px solid $yellow;
@@ -390,6 +391,25 @@ a{
         margin-right: 0px;
         margin-bottom: 24px;
     }
+    .hero{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .intro,.banner{
+        width: 100%;
+    }
+    .cscard{
+        width: 100%;
+    }
+    .usercard{
+        margin-bottom: 75px;
+    }
+    .user{
+        .list{
+            justify-content: center;
+        }
+        
+    }
 }
 // P1手機版
 @media(max-width:376px){
@@ -419,7 +439,7 @@ a{
         max-width: 130px;
     }
     .hero{
-        flex-wrap: wrap;
+        
         margin-bottom: 60px;
         h4{
             font-size: 16px;
@@ -434,9 +454,7 @@ a{
             line-height: 24px;
         }
     }
-    .intro,.banner{
-        width: 100%;
-    }
+    
     .title{
         font-size: 28px;
         line-height: 40px;
@@ -446,7 +464,7 @@ a{
         margin-bottom: 60px;
     }
     .cscard{
-        width: 100%;
+        
         margin-bottom: 24px;
         img{
             width: 60px;
